@@ -1,0 +1,128 @@
+<ng-container>
+	<div class="wrap" *ngIf="content_ready; else loading">
+		<section>
+			<app-hero
+			[hero_title]="hero_title"
+			[hero_description]="hero_description">
+			</app-hero>
+		</section><!-- Hero -->
+		
+		<section class="services-section page-section fullscreen d-flex align-items-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-gl-12 mb-5">
+						<h2>{{ services_title }}</h2>
+						<h4>{{ services_desc }}</h4>
+					</div>
+				</div>
+		
+				<div class="row mt-4 mb-5">
+					<div class="col-lg-3" *ngFor="let s of services">
+						<div class="icon">
+							<img [src]="s.icon" class="service-icon" [alt]="s.title">
+						</div>
+						<h5 class="font-weight-bold mb-3">{{ s.title }}</h5>
+						<p class="p-text">
+							{{ s.description }} 
+						</p>
+					</div>
+		
+					<div id="wave-services">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f3f4f5" fill-opacity="1" d="M0,32L48,53.3C96,75,192,117,288,133.3C384,149,480,139,576,144C672,149,768,171,864,154.7C960,139,1056,85,1152,53.3C1248,21,1344,11,1392,5.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+					</div>
+				</div>
+		
+				<app-button
+				[label]="services_button_label"
+				[capitalize]="capitalize_button"></app-button>
+			</div>
+		</section><!-- Services -->
+		
+		<section class="portfolio-section page-section bg-dark-blue">
+			<div class="container">
+				<div class="row mb-5">
+					<div class="col-lg-6">
+						<h2 class="text-white">Our Work</h2>
+						<h4 class="text-white">Checkout our recent projects created with love.</h4>
+					</div>
+					<div class="col-lg-6 text-right">
+						<app-button
+						[routerLink]="['/portfolio']"
+						[label]="portfolio_button_label"
+						[capitalize]="capitalize_button">
+						</app-button>
+					</div>
+				</div>
+			</div>
+		
+			<div class="container-fluid slick-carousel pl-0 pr-0">
+				<ngx-slick-carousel 
+				#slickModal="slick-carousel"
+				[config]="slideConfig"
+				(mousedown)="'true'"
+				(mouseup)="'false'"
+				(init)="slickInit($event)"
+				(breakpoint)="breakpoint($event)"
+				(afterChange)="afterChange($event)"
+				(beforeChange)="beforeChange($event)">
+					<div ngxSlickItem *ngFor="let image of carousel_slides" class="slide mx-2">
+						<img src="{{ image }}" alt="slides" width="100%">
+					</div>
+				</ngx-slick-carousel>
+			</div>
+		</section><!-- Portfolio -->
+		
+		<section class="story-section page-section fullscreen d-flex align-items-center">
+			<div class="container">
+				<div class="row mb-5">
+					<div class="col-lg-12">
+						<h2>{{ how_title }}</h2>
+						<h4>{{ how_desc }}</h4>
+					</div>
+				</div>
+		
+				<div class="row mb-4">
+					<div class="col-lg-6 mb-4" *ngFor="let h of how_items">
+						<div class="card-shadowed d-flex align-items-center">
+							<div class="card-icon mr-5">
+								<img [src]="h.icon" class="card-icon" [alt]="h.title">
+							</div>
+							<div class="card-content">
+								<h4 class="font-weight-bold">{{ h.title }}</h4>
+								<p class="p-text mb-0">{{ h.description }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- Story Section -->
+		
+		<section class="call-to-action page-section bg-dark-blue">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-8">
+						<div class="card-shadowed p-5 text-center">
+							<div class="p-4">
+								<h2 class="mb-4">{{ cta_title }}</h2>
+								<h4 class="mb-5 p-text px-5">
+									{{ cta_desc }}
+								</h4>
+								<app-button
+								[label]="contact_button_label"
+								[capitalize]="capitalize_button"></app-button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div id="wave-cta">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#081931" fill-opacity="1" d="M0,32L48,69.3C96,107,192,181,288,186.7C384,192,480,128,576,85.3C672,43,768,21,864,37.3C960,53,1056,107,1152,112C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+			</div>
+		</section>
+	</div>
+	
+	<ng-template #loading>
+		<app-spinner></app-spinner>
+	</ng-template>
+</ng-container>

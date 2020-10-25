@@ -1,0 +1,29 @@
+button, input, textarea {
+    outline: none !important;
+}
+
+.page {
+    overflow: hidden;
+    position: relative;
+    z-index: 8;
+}
+
+.flex-even {
+    flex: 1;
+}
+
+.fullscreen {
+	padding: 100px 0;
+	@media(min-width: 1366px) {
+		height: 100vh;
+		padding: 0;
+	}
+}
+
+.heavy-padding-y {
+    padding: 110px 0;
+}
+
+.heavy-padding-t {
+    padding-top: 200px;
+}

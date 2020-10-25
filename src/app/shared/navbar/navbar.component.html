@@ -1,0 +1,30 @@
+<nav class="theme-navbar">
+    <div class="theme-container h-100 d-flex align-items-center">
+        <div class="logo mr-5">
+            <a [routerLink]="['home']">
+                <img src="assets/media-resources/logo.png" alt="vhin-tech-logo">
+            </a>
+        </div>
+    
+        <div class="navbar-menu flex-even text-center">
+            <ul class="list-unstyled m-0">
+                <li class="mx-3 mx-xl-4" *ngFor="let r of routes">
+                    <a [routerLink]="[r.route]">{{ r.label }}</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="call-to-action">
+            <app-button
+            [label]="button_label"
+            [capitalize]="capitalize">
+            </app-button>
+		</div>
+		
+		<div class="mobile-menu-btn-wrap flex-even text-right">
+			<button class="mobile-menu-btn">
+				<i class="fas fa-bars"></i>
+			</button>
+		</div>
+    </div>
+</nav>

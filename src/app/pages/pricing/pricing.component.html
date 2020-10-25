@@ -1,0 +1,97 @@
+<app-banner
+[banner_title]="banner_title"
+[banner_description]="banner_description">
+</app-banner>
+
+<section class="page-section fullscreen d-flex align-items-center bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <h2>
+                    Web Design and Development Packages
+                </h2>
+                <h4 class="mb-5 p-text">
+                    Here are the different packages we offer:
+                </h4>
+            </div>
+        </div>
+        <div class="row row-eq-height">
+            <div class="col-lg-4">
+                <div class="card-shadowed shadow-2 p-5 text-center h-100">
+                    <h6 class="p-text">Starts at</h6>
+                    <h2 class="mb-3 rounded-o bg-orange text-white py-2 round-o">
+                        &#8369; 10,000
+                    </h2>
+                    <h4 class="mb-0">Basic Website</h4>
+                    <hr class="my-4">
+                    <ul class="package-features list-unstyled text-left">
+                        <li>8 Standard Pages</li>
+                        <li>Dynamic Content</li>
+                        <li>SEO Friendly</li>
+                        <li>Contact Form</li>
+                        <li>1 Custom Email</li>
+                        <li>1 Logo Design</li>
+                        <li>1 year free domain</li>
+                        <li>1 year free hosting</li>
+                        <li>Search Feature</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card-shadowed shadow-2 p-5 text-center h-100">
+                    <h6 class="p-text">Starts at</h6>
+                    <h2 class="mb-3 rounded-o bg-orange text-white py-2 round-o">
+                        &#8369; 20,000
+                    </h2>
+                    <h4 class="mb-0">Ecommerce Website</h4>
+                    <hr class="my-4">
+                    <ul class="package-features list-unstyled text-left">
+                        <li>Dynamic Content</li>
+                        <li>20 Standard Pages</li>
+                        <li>Contact Form</li>
+                        <li>3 Custom Email</li>
+                        <li>1 year free domain</li>
+                        <li>1 year free hosting</li>
+                        <li>Basic Inventory</li>
+                        <li>Product Page</li>
+                        <li>Search Features</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card-shadowed shadow-2 p-5 text-center h-100">
+                    <h6 class="p-text">Starts at</h6>
+                    <h2 class="mb-3 rounded-o bg-orange text-white py-2 round-o">
+                        &#8369; 30,000
+                    </h2>
+                    <h4 class="mb-0">Customized Web Platform</h4>
+                    <hr class="my-4">
+                    <ul class="package-features list-unstyled text-left">
+                        <li>Dynamic Content</li>
+                        <li>1 Logo Design</li>
+                        <li>1 year free domain</li>
+                        <li>1 year free hosting</li>
+                        <li>Customized Database</li>
+                        <li>Admin Dashboard</li>
+                        <li>Custom Features</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section bg-dark-blue py-5">
+    <div class="container py-4">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h2 class="mb-2 text-white">Not sure where to start?</h2>
+                <p class="p-text mb-0 text-white">Did not see what you need? Get a quote or send us a message!</p>
+            </div>
+            <div class="col-lg-5">
+                <app-button class="mr-4" [label]="quote_btn_label" [capitalize]="capitalize"></app-button>
+                <app-button [label]="message_btn_label"  [routerLink]="['/contact-us']" [capitalize]="capitalize"></app-button>
+            </div>
+        </div>
+    </div>
+</section>

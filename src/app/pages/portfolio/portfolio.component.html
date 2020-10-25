@@ -1,0 +1,62 @@
+<div class="page portfolio">
+    <app-banner
+    [banner_title]="banner_title"
+    [banner_description]="banner_description">
+    </app-banner>
+    
+    <div class="page-section heavy-padding-y">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mb-5">
+                    <nav>
+                        <div class="nav nav-tabs border-0" id="nav-tab" role="tablist">
+                            <a class="theme-btn-group active" 
+                            id="websites-tab" 
+                            data-toggle="tab" 
+                            data-target="#websites" 
+                            role="tab" 
+                            aria-controls="websites" 
+                            aria-selected="true">Websites</a>
+
+                            <a class="theme-btn-group" 
+                            id="graphics-designs-tab" 
+                            data-toggle="tab" 
+                            data-target="#graphics-designs" 
+                            role="tab" 
+                            aria-controls="graphics-designs" 
+                            aria-selected="false">Graphics Designs</a>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="websites" role="tabpanel" aria-labelledby="websites-tab">
+                            <div class="row">
+                                <div class="col-lg-4 website-thumbnail" *ngFor="let n of [0,1,2,3,4,5,6,7,8,9,10,11]">
+                                    <img src="/assets/media-resources/placeholder.jpg" alt="website-thumbnail" class="portfolio-thumb">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="graphics-designs" role="tabpanel" aria-labelledby="graphics-designs-tab">
+                            <div class="row">
+                                <div class="col-lg-4 website-thumbnail">
+                                    <img src="/assets/media-resources/graphics/menu-facebook-ad-1.jpg" alt="website-thumbnail" class="portfolio-thumb">
+                                </div>
+                                <div class="col-lg-4 website-thumbnail">
+                                    <img src="/assets/media-resources/graphics/menu-facebook-ad-2.jpg" alt="website-thumbnail" class="portfolio-thumb">
+                                </div>
+                                <div class="col-lg-4 website-thumbnail">
+                                    <img src="/assets/media-resources/graphics/menu-facebook-ad-3.jpg" alt="website-thumbnail" class="portfolio-thumb">
+                                </div>
+                                <div class="col-lg-4 website-thumbnail" *ngFor="let n of [0,1,2,3,4,5,6,7,8,9,10,11]">
+                                    <img src="/assets/media-resources/placeholder1.jpg" alt="website-thumbnail" class="portfolio-thumb">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

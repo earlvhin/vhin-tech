@@ -1,0 +1,13 @@
+.package-features {
+    li {
+        font : {
+            size: 13px;
+            weight: 600;
+        }
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

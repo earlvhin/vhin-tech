@@ -1,0 +1,40 @@
+.banner {
+    background: $dark_blue;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 8;
+
+    &:after {
+        background-image: url('/assets/media-resources/logo-white.png');
+        background : {
+            repeat: no-repeat;
+            position: 75% center;
+    
+        }
+        content: "";
+        opacity: 0.05;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    h1 {
+        color: $white;
+        font : {
+            size: 40px;
+            weight: 700;
+        }
+        line-height: 1.3em;
+    }
+
+    h4 {
+        color: $white;
+        font-size: 18px;
+        line-height: 1.6em;
+        margin: 0;
+    }
+}

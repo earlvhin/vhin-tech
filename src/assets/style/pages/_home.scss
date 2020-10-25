@@ -1,0 +1,45 @@
+.services-section {
+    overflow: hidden;
+    position: relative;
+    z-index: 8;
+
+    .icon {
+        height: 80px;
+        .service-icon {
+            width: 60px;
+        }
+    }
+    
+    .services-wave {
+        bottom: -150px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+.portfolio-section {
+    padding: 130px 0;
+    .slick-list {
+        cursor: move;
+    }
+}
+
+.story-section {
+    background-color: $almost-white;
+}
+
+.call-to-action {
+    overflow:hidden;
+    padding: 130px 0;
+    position: relative;
+    z-index: 8;
+
+    .hero-wave {
+        bottom: -150px;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
+}

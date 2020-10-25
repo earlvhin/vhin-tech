@@ -1,0 +1,53 @@
+.footer {
+    background-color: $dark;
+    padding: 100px 20px;
+
+    .footer-widget {
+        img {
+            width: 30px;
+        }
+    }
+
+    .email-contact-icon {
+        width: 20px;
+    }
+
+    .footer-menu {
+        li {
+            display: inline-block;
+            margin-right: 25px;
+            a {
+                color: $white;
+                font : {
+                    size: 14px;
+                    weight: 600;
+                }
+                text-decoration: none;
+                transition: 0.2s linear;
+                
+                &:hover {
+                    color: $orange;
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .footer-social {
+        li {
+            display: inline-block;
+            margin-right: 15px;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                img {
+                    width: 30px;
+                }
+            }
+        }
+    }
+}

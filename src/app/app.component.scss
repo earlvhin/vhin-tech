@@ -1,0 +1,14 @@
+.under-development {
+    background-color: orangered;
+    color: #fff;
+    font : {
+        size: 10px;
+        weight: bold;
+    }
+
+    padding: 13px;
+    position: fixed;
+    text-transform: uppercase;
+    top: 300px;
+    z-index: 9;
+}

@@ -1,0 +1,60 @@
+<footer class="footer">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-4">
+                <div class="footer-widget">
+                    <img src="assets/media-resources/logo-gray.png" class="mb-3" alt="logo">
+                    <h6 class="text-white font-weight-bold">About Us</h6>
+                    <p class="p-text text-white mb-0">
+                        <strong class="colored">Vhin Tech</strong> 
+                        is a growing startup company focusing on web development and web design services. 
+                        Founded on 2019.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-8 text-right">
+                <div class="footer-menu mb-4">
+                    <ul class="list-unstyled m-0">
+                        <li *ngFor="let r of routes">
+                            <a [routerLink]="[r.route]">{{ r.label }}</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                <img src="assets/media-resources/facebook.png" alt="facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/media-resources/linkedin.png" alt="linkedin">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/media-resources/youtube.png" alt="youtube">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <a href="mailto:hello@vhin.tech" class="p-text text-white font-weight-bold mb-0">
+                    <img src="assets/media-resources/send.png" class="email-contact-icon mr-2" alt="send">
+                    <span>hello@vhin.tech</span>
+                </a>
+            </div>
+            <div class="col-lg-6 text-right">
+                <p class="p-text text-white mb-0">
+                    &copy; All Rights Reserved 2019
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
